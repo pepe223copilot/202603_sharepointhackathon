@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation Index</title>
+  <style>
+    :root {
+      --bg: #f4f1e8;
+      --panel: rgba(255, 255, 255, 0.78);
+      --ink: #18242b;
+      --accent: #1d4ed8;
+      --line: rgba(24, 36, 43, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(29, 78, 216, 0.16), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.14), transparent 32%),
+        linear-gradient(135deg, #f8f4ec, #ece8db 55%, #e8eef2);
+      padding: 32px;
+    }
+
+    .shell {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(24, 36, 43, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1;
+    }
+
+    p {
+      line-height: 1.8;
+      color: #42515a;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    a {
+      display: block;
+      padding: 18px;
+      border-radius: 18px;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--line);
+      font-weight: 700;
+    }
+
+    small {
+      display: block;
+      margin-top: 6px;
+      font-weight: 500;
+      color: #5c6b73;
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <h1>Presentation Index</h1>
+    <p>応募説明用のスライド原稿です。Problem、Concept、Features、Architecture、Demo、Category Fit、Closing の順に確認できます。</p>
+    <div class="grid">
+      <a href="slide01_title_updated%20(3).html">01. Title<small>Build Your Own Copilot Cowork with SharePoint</small></a>
+      <a href="slide02_problem_en%20(2).html">02. Challenges<small>Invoice processing pain points</small></a>
+      <a href="slide03_concept_en%20(2).html">03. Concept<small>Just Drop It</small></a>
+      <a href="slide04_features_en%20(1).html">04. Features<small>AI in SharePoint, Agent ①, Agent ②</small></a>
+      <a href="slide05_architecture_en%20(2).html">05. Architecture<small>4-step flow from drop to payment ready</small></a>
+      <a href="slide06_demo_en%20(5).html">06. Demo<small>Human work is limited to drop and approve</small></a>
+      <a href="slide07_category_v2_en%20(1).html">07. Category Fit<small>Why this fits both categories</small></a>
+      <a href="slide08_closing_en%20(2).html">08. Closing<small>SharePoint turns files into knowledge</small></a>
+    </div>
+  </main>
+</body>
+</html>

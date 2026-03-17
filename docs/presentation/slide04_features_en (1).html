@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>04. 3 Features</title><style>
+:root{
+  --sp:#2563eb;--spbg:#eff6ff;--spbd:#bfdbfe;
+  --kg:#7c3aed;--kgbg:#f5f3ff;--kgbd:#ddd6fe;
+  --ag:#10b981;--agbg:#ecfdf5;--agbd:#bbf7d0;
+  --ext:#f59e0b;--extbg:#fffbeb;--extbd:#fde68a;
+  --local:#0ea5e9;--localbg:#ecfeff;--localbd:#a5f3fc;
+  --out:#e11d48;--outbg:#fff1f2;--outbd:#fecdd3;
+  --ink:#0f172a;--muted:#64748b;--line:#e2e8f0;
+  --shadow:0 16px 40px rgba(15,23,42,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;background:#eef2f8;color:var(--ink)}
+a{text-decoration:none;color:inherit}
+.slide{width:1600px;height:900px;margin:0 auto;background:#fff;border-radius:0;overflow:hidden;box-shadow:none;display:grid;grid-template-rows:auto 1fr auto;border:none}
+.topbar{padding:14px 26px;background:linear-gradient(135deg,#0f172a 0%,#1d4ed8 55%,#6d28d9 100%);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-shrink:0}
+.topbar h1{font-size:30px;font-weight:900;line-height:1.15}
+.topbar .meta{display:flex;gap:8px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);font-size:12px;font-weight:800;color:#fff}
+.content{flex:1;padding:40px 48px;overflow:hidden}
+.footer{padding:10px 20px;border-top:1px solid var(--line);background:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-shrink:0}
+.nav{display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;font-weight:800;color:var(--ink);font-size:13px;cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--sp),var(--kg));color:#fff;border:none}
+.notes{font-size:16px;color:var(--muted);max-width:72%}
+.notes strong{color:var(--ink)}
+.card{border-radius:22px;padding:28px;border:1px solid var(--line);background:#fafbfd}
+.card h3{font-size:24px;font-weight:800;line-height:1.25;margin-bottom:14px}
+.card ul{padding-left:1.1em}.card li{font-size:18px;line-height:1.6;margin-bottom:8px}
+.card p{font-size:14px;line-height:1.55;color:#334155}
+.card.sp{background:var(--spbg);border-color:var(--spbd)}
+.card.kg{background:var(--kgbg);border-color:var(--kgbd)}
+.card.ag{background:var(--agbg);border-color:var(--agbd)}
+.card.ext{background:var(--extbg);border-color:var(--extbd)}
+.card.local{background:var(--localbg);border-color:var(--localbd)}
+.card.out{background:var(--outbg);border-color:var(--outbd)}
+.card.plain{background:#f8fafc;border-color:var(--line)}
+.kicker{display:inline-block;padding:8px 16px;border-radius:999px;font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+.kicker.kg{background:var(--kgbg);color:var(--kg)}.kicker.ag{background:var(--agbg);color:var(--ag)}
+.kicker.sp{background:var(--spbg);color:var(--sp)}.kicker.local{background:var(--localbg);color:var(--local)}
+.kicker.ext{background:var(--extbg);color:var(--ext)}.kicker.out{background:var(--outbg);color:var(--out)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.callout{border-left:6px solid var(--sp);background:var(--spbg);border-radius:22px;padding:22px 28px;font-size:20px;line-height:1.6;margin-top:24px}
+.callout.g{border-left-color:var(--ag);background:var(--agbg)}
+.callout.p{border-left-color:var(--kg);background:var(--kgbg)}
+.callout.a{border-left-color:var(--ext);background:var(--extbg)}
+.safearea{border:2px dashed #cbd5e1;border-radius:18px;background:repeating-linear-gradient(45deg,#f8fafc,#f8fafc 10px,#fff 10px,#fff 20px);display:flex;align-items:center;justify-content:center;text-align:center;color:#94a3b8;font-weight:700;font-size:13px;padding:16px;height:100%}
+.hero-text{font-size:44px;font-weight:900;line-height:1.1;color:var(--ink)}
+.sub-text{font-size:20px;font-weight:700;color:#334155;margin-top:8px;line-height:1.4}
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;font-size:13px;font-weight:800}
+.trigger{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#fef3c7;border:2px dashed #f59e0b;font-size:12px;font-weight:800;color:#92400e;margin-top:6px}
+.step-row{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:start;margin-bottom:12px}
+.step-num{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#fff;flex-shrink:0}
+.step-body{border:1px solid var(--line);border-radius:18px;padding:14px;background:#fff}
+.step-body h3{font-size:16px;font-weight:800;margin-bottom:10px}
+.row-c{display:flex;gap:8px;align-items:stretch}
+.row-c .card{flex:1;min-width:0}
+.plus-s{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:26px;font-size:18px;font-weight:900;color:#94a3b8}
+.arr-h{display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;width:30px;font-size:20px;font-weight:900;color:#94a3b8;gap:2px}
+.arr-h .lbl{font-size:10px;font-weight:800;color:#94a3b8;text-align:center;line-height:1.2}
+.conn{text-align:center;font-size:18px;color:#94a3b8;padding:4px 0;font-weight:700}
+.conn .txt{font-size:12px;font-weight:800;color:#64748b}
+.lgd{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.ltag{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:800}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:14px;overflow:hidden}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#f8fafc;font-weight:800;font-size:13px}
+@media(max-width:1100px){.g2,.g3{grid-template-columns:1fr}.row-c{flex-direction:column}.arr-h,.plus-s{display:none}.slide{aspect-ratio:auto;min-height:600px}}
+</style>
+<style id="unified-theme">
+html,body{margin:0;padding:0;background:#0f172a;}
+.slide{width:1600px;height:900px;margin:0 auto;background:#ffffff;border-radius:0;box-shadow:none;display:grid;grid-template-rows:auto 1fr auto;}
+header,.topbar{background:linear-gradient(135deg,#0b1220,#0f172a,#1f2a44);color:#fff;padding:18px 32px;}
+header h1,.topbar h1{font-size:30px;font-weight:900;}
+.content{padding:40px 48px !important;}
+footer{background:#ffffff;border-top:1px solid #e2e8f0;padding:14px 28px;}
+.nav{display:flex;gap:10px;}
+.btn{padding:10px 18px;border-radius:12px;font-weight:800;border:1px solid #e2e8f0;background:#fff;color:#0f172a;text-decoration:none;}
+.btn.primary{background:#2563eb;color:#fff;border:none;}
+</style>
+</head><body><main class="slide"><header class="topbar"><h1>04. 3 Features</h1><div class="meta"><span class="badge">Features</span><span class="badge">AI in SP / Agent① / Agent②</span></div></header><div class="content"><div>
+<div style="font-size:40px;font-weight:900;margin-bottom:24px">Powered by Three Core Features</div>
+<div class="g3">
+<div class="card kg">
+<span class="kicker kg">AI in SharePoint</span>
+<h3>Knowledge Agent(AutoFill)+ Syntex<br/>Invoice Data Extraction</h3>
+<ul>
+<li>Automatically extract data from invoices</li>
+<li>Invoice Number / Issue Date / Due Date / Amount / Bill To</li>
+<li>Consistency check with AutoFill / Syntex models</li>
+<li>After validation → Trigger Agent ①</li>
+</ul>
+<div style="margin-top:10px;background:#fff;border-radius:12px;padding:10px;font-size:12px">
+<div style="color:var(--muted);font-weight:800;margin-bottom:4px">INPUT → PROCESS → OUTPUT</div>
+<div>Invoice file → Extract &amp; validate → Structured metadata</div>
+</div>
+</div>
+<div class="card ag">
+<span class="kicker ag">Copilot Studio</span>
+<h3>Agent ①<br/>Match, Register &amp; Validate</h3>
+<ul>
+<li>Match with customer master and register Customer ID</li>
+<li>AI consistency check against billing recipient master</li>
+<li>Human-in-the-loop final review</li>
+<li>Update status to Human Checked</li>
+</ul>
+<div style="margin-top:10px;background:#fff;border-radius:12px;padding:10px;font-size:12px">
+<div style="color:var(--muted);font-weight:800;margin-bottom:4px">INPUT → PROCESS → OUTPUT</div>
+<div>SharePoint + two external masters → Match &amp; validate → Register Customer ID &amp; update status</div>
+</div>
+</div>
+<div class="card ag">
+<span class="kicker ag">Copilot Studio</span>
+<h3>Agent ②<br/>CSV Generation</h3>
+<ul>
+<li>Filter invoices due this month and marked Human Checked</li>
+<li>Match with bank master to enrich account details</li>
+<li>Group invoices by bank</li>
+<li>Generate bank-specific CSV files</li>
+</ul>
+<div style="margin-top:10px;background:#fff;border-radius:12px;padding:10px;font-size:12px">
+<div style="color:var(--muted);font-weight:800;margin-bottom:4px">INPUT → PROCESS → OUTPUT</div>
+<div>Approved invoices + bank master → Filter &amp; group → Bank-specific CSV</div>
+</div>
+</div>
+</div>
+<div class="callout" style="margin-top:12px">These three features work together with <strong>SharePoint as the knowledge foundation</strong>, enabling a flow from "just drop it" to "payment ready"</div>
+</div></div><footer class="footer"><div class="nav"><a class="btn" href="slide03_concept_en (2).html">← Prev</a><a class="btn" href="index.html">Index</a><a class="btn primary" href="slide05_architecture_en (2).html">Next →</a></div><div class="notes"><strong>Speaking notes:</strong> There are three features: the SharePoint AI layer, Agent ①, and Agent ② — each with a clear role.</div></footer></main></body></html>

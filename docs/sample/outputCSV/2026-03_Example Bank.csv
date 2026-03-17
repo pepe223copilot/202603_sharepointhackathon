@@ -1,0 +1,3 @@
+BranchName,BranchCode,AccountType,AccountNumber,AccountName,TransferAmount
+Demo Branch,101,Savings,1234567,Fabrikam Trading,1260.0
+Demo Branch,101,Savings,1234567,Fabrikam Trading,2450.0

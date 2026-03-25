@@ -8,7 +8,7 @@
 
 | | Name | Role | Highlights |
 |---|------|------|-----------|
-| 🅳 | **Yuichi Tsutsumi / Pepe** | Overall Lead | Microsoft MVP (M365 Copilot) · TPE Award 2023 & 2025 |
+| 🅳 | **Yuichi Tsutsumi / Pepe** | Overall Lead | Microsoft MVP (M365 Copilot) · TPE Award 2023 & 2025 · Community Organizer of Anytime Copilot (Nandemo Copilot) |
 | 🅲 | **Yasushi Shiroma** | Passion Leader & Presenter | Ph.D. (Engineering) · Windows AI Day Award 2026 |
 | 🅱 | **Toshio Otsubo** | Design Leader | UX & workflow design · Windows AI Day Award 2026 |
 | 🅰 | **Ryo Sekine** | Idea Leader | TPE Award 2024 (Azure) · Windows AI Day Award 2026 |
@@ -24,8 +24,10 @@
 Senior specialist in Microsoft Copilot Studio, Generative AI, and Power Platform. Leads enterprise-grade AI solution design, AI Solution Architecture, and AI governance. As the hackathon overall lead, he drove the project from ideation through full implementation — designing the three-agent pipeline, SharePoint library structure, and the Advanced Approvals AI stage (GPT-5.2 reasoning).
 
 🏆 **[Microsoft MVP — M365 Copilot](https://mvp.microsoft.com/ja-JP/)**  
-🏆 **[Microsoft Top Partner Engineer Award 2023](https://www.microsoft.com/ja-jp/partner/jp-tpeaward)** — Modern Work  
-🏆 **[Microsoft Top Partner Engineer Award 2025](https://www.microsoft.com/ja-jp/partner/jp-tpeaward2025)** — Business Applications
+🏆 **[Anytime Copilot (Nandemo Copilot)](https://nandemo.connpass.com/)** — Community Organizer  
+🏆 **[Microsoft Top Partner Engineer Award 2023](https://www.microsoft.com/ja-jp/partner/jp-tpeaward)** — Modern Work   
+🏆 **[Microsoft Top Partner Engineer Award 2025](https://www.microsoft.com/ja-jp/partner/jp-tpeaward2025)** — Business Applications  
+
 
 ---
 
